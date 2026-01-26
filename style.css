@@ -1,0 +1,20 @@
+.btn1{
+    border: 2px solid black;
+    margin-left: 10px;
+}
+
+ol{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
