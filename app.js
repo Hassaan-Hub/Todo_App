@@ -3,6 +3,7 @@ function addTodo(){
     var list = document.getElementById("list")
 
     var li = document.createElement("li")
+    var p = document.createElement("p")
     var delBtn = document.createElement("button")
     var editBtn = document.createElement("button")
 
@@ -18,8 +19,9 @@ function addTodo(){
     li.appendChild(liText)
     delBtn.appendChild(delBtnText)
     editBtn.appendChild(editBtnText)
-    li.appendChild(delBtn)
-    li.appendChild(editBtn)
+    p.appendChild(delBtn)
+    p.appendChild(editBtn)
+    li.appendChild(p)
     list.appendChild(li)
 
     input.value = ""

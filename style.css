@@ -9,12 +9,20 @@ ol{
 }
 
 li{
-    align-items: center;
+    display: inline-block;
+    word-wrap: break-word;
+    text-align: center;
     margin-left: 40px;
     margin-top: 40px;
     width: 150px;
-    height: 40px;
+    height: 60px;
     padding: 10px;
+    line-height: 1;
     border: 2px solid black;
+}
+
+p{
+    margin: 0 auto;
+    margin-bottom: 5px;
 }
 
