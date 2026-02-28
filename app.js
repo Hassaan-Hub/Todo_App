@@ -27,7 +27,6 @@ function addTodo(){
     input.value = ""
 }
 
-
 function delBtn(){
     event.target.parentNode.remove();
 }
@@ -41,5 +40,3 @@ function editBtn(e){
     }
     
 }
-
-
