@@ -28,15 +28,16 @@ function addTodo(){
 }
 
 function delBtn(){
-    event.target.parentNode.remove();
+    event.target.parentNode.parentNode.remove();
 }
 
 function editBtn(e){
-    var oldText = e.parentNode.firstChild.nodeValue;
-    var newText = prompt("Enter your Edit value", oldText)
+    var li = e.parentNode.parentNode;
+    var oldText = li.firstChild.nodeValue;
+
+    var newText = prompt("Enter your new Text", oldText)
 
     if(newText != "" && newText != null){
-        e.parentNode.firstChild.nodeValue = newText;
+        li.firstChild.nodeValue = newText;
     }
-    
 }
