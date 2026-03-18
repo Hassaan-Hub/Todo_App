@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(135deg, #304FFE 0%, #00E676 100%);
     min-height: 100vh;
@@ -11,13 +17,14 @@ body {
 }
 
 #input {
-    padding: 14px 20px;
+    padding: 0.875rem 1.25rem;
     border: none;
     border-radius: 8px;
     font-size: 1.05rem;
-    width: 300px;
+    width: 80vw;
+    max-width: 340px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    margin-right: 12px;
+    margin-right: 0.75rem;
     outline: none;
     transition: box-shadow 0.2s;
 }
@@ -30,8 +37,8 @@ button, .btn1 {
     background: #1e88e5;
     color: white;
     border: none;
-    padding: 12px 22px;
-    margin: 4px 6px;
+    padding: 0.75rem 1.35rem;
+    margin: 0.25rem 0.38rem;
     border-radius: 25px;
     font-size: 1rem;
     font-family: inherit;
@@ -40,6 +47,7 @@ button, .btn1 {
     transition: background 0.2s, transform 0.1s;
     outline: none;
     box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    min-width: 100px;
 }
 
 button:hover, .btn1:hover {
@@ -48,21 +56,21 @@ button:hover, .btn1:hover {
 }
 
 ol#list {
-    margin-top: 32px;
+    margin-top: 2rem;
     background: rgba(255, 255, 255, 0.62);
-    padding: 32px 38px 10px 38px;
+    padding: 2rem 2.4rem 0.7rem 2.4rem;
     border-radius: 35px;
     box-shadow: 0 10px 50px 0 rgba(30, 72, 142, .09);
-    width: 400px;
-    max-width: 95vw;
+    width: 90vw;
+    max-width: 400px;
     list-style-type: decimal;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
 }
 
 li {
     background: #ffffffb7;
-    margin-bottom: 18px;
-    padding: 15px 16px;
+    margin-bottom: 1.12rem;
+    padding: 1rem 1.12rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -81,7 +89,7 @@ li {
 li p {
     margin: 0;
     display: flex;
-    gap: 10px;
+    gap: 0.6rem;
 }
 
 li::before { 
@@ -103,4 +111,44 @@ li::before {
 ::-webkit-scrollbar-thumb{
     background: #00e67680;
     border-radius: 15px;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 600px) {
+    #input {
+        width: 95vw;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-right: 0;
+        margin-bottom: 0.7rem;
+    }
+
+    button, .btn1 {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.85rem 1rem;
+    }
+
+    ol#list {
+        padding: 1.2rem 0.8rem 0.6rem 1.1rem;
+        width: 98vw;
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    li {
+        padding: 0.85rem 0.6rem;
+        font-size: 1rem;
+    }
+}
+
+/* Further scaling for very small screens */
+@media (max-width: 400px) {
+    ol#list {
+        padding: 0.75rem 0.3rem 0.4rem 0.5rem;
+    }
+    li {
+        font-size: 0.94rem;
+        padding: 0.68rem 0.3rem;
+    }
 }
